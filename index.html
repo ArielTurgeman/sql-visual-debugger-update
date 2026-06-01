@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SQL Visual Debugger Update Waitlist</title>
+    <meta
+      name="description"
+      content="Join the SQL Visual Debugger update waitlist and vote on advanced features being explored for the existing VS Code extension."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-media" src="./assets/demo.gif" alt="" />
+        <div class="hero-overlay"></div>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="product-id">
+              <img class="brand-logo" src="./assets/icon.png" alt="" />
+              <span>SQL Visual Debugger</span>
+            </div>
+            <p class="reassurance-line">For the existing SQL Visual Debugger VS Code extension.</p>
+            <h1 id="hero-title">Help shape the next SQL Visual Debugger update</h1>
+            <p class="hero-copy">
+              Remote connections, AI debugging, richer intermediate results, and
+              query comparison are being considered. Vote for what matters most
+              and get notified at launch.
+            </p>
+            <p class="marketplace-proof" id="marketplace">
+              7,800+ installations on the VS Code Marketplace ·
+              <a href="https://marketplace.visualstudio.com/items?itemName=arieldev.sql-visual-debugger">View Marketplace</a>
+            </p>
+          </div>
+
+          <form class="waitlist-form hero-form" id="waitlistForm" novalidate>
+            <div class="form-heading">
+              <h2>Join the Waitlist</h2>
+              <p>Vote for the features you care about most.</p>
+            </div>
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+              <p class="field-error" id="emailError"></p>
+            </div>
+
+            <fieldset class="feature-vote compact-vote">
+              <legend>What would you most want to see in the update?</legend>
+              <label><input type="radio" name="feature" value="Remote database connections" required /> Remote database connections</label>
+              <label><input type="radio" name="feature" value="AI query debugging and suggestions" /> AI query debugging and suggestions</label>
+              <label><input type="radio" name="feature" value="Search/filter/sort intermediate results" /> Search/filter/sort intermediate results</label>
+              <label><input type="radio" name="feature" value="Broader SQL syntax support" /> Broader SQL syntax support</label>
+              <label><input type="radio" name="feature" value="Other" /> Other</label>
+              <input class="other-input" id="otherFeature" name="otherFeature" type="text" placeholder="Tell us what you want" />
+              <p class="field-error" id="featureError"></p>
+            </fieldset>
+
+            <button class="submit-button" type="submit">Join Waitlist</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <div class="post-submit-question" id="postSubmitQuestion" hidden>
+              <div class="post-submit-title">Thanks. One optional question:</div>
+              <label for="usefulUpdate">What would make this update most useful for you?</label>
+              <textarea id="usefulUpdate" name="usefulUpdate" rows="4" placeholder="Optional"></textarea>
+              <button class="secondary-submit" id="saveNoteButton" type="button">Save note</button>
+              <p class="form-status" id="detailsStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
